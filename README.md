@@ -19,7 +19,7 @@ Designed for monitoring dashboards such as [**gethomepage.dev**](https://github.
 
 ## Requirements
 
-- TP-Link Easy Smart switch with web interface accessible, in my case TL-SG108PE with 4 POE ports.
+- TP-Link Easy Smart switch with web interface accessible, in my case TL-SG108PE 8 port with 4 POE ports. Feel free to test it with other switches, as I do not have access to this option for now.
 
 ## Configuration
 
