@@ -26,6 +26,7 @@ LINK_STATUS = {
 
 # ---------------- FUNCTIONS ----------------
 def login(session):
+    # Log in to the switch using a session
     session.post(
         f"http://{SWITCH_IP}/logon.cgi",
         data={"logon": "Login", "username": USERNAME, "password": PASSWORD},
@@ -33,6 +34,7 @@ def login(session):
     )
 
 def parse_js_object(text, var_name):
+    # Parse a JS object from the switch HTML/JS page
     m = re.search(rf"var {var_name}\s*=\s*{{(.*?)}};", text, re.DOTALL)
     if not m:
         return {}
@@ -60,12 +62,11 @@ def get_switch_data():
     # --- PoE status ---
     try:
         r = session.get(f"http://{SWITCH_IP}/PoeRecoveryRpm.htm", timeout=TIMEOUT)
-        cfg = parse_js_object(r.text, "portRecoveryConfig")
-        m = re.search(r'ip\s*:\s*\[([^\]]*)\]', str(cfg))
+        m = re.search(r"var portRecoveryConfig\s*=\s*{.*?ip\s*:\s*\[([^\]]*)\]", r.text, re.DOTALL)
         if m:
             ips = [x.strip().strip('"') for x in m.group(1).split(",")]
-            for i, val in enumerate(ips):
-                poe_data[i + 1] = "On" if val else "Off"
+            for i in range(len(ips)):
+                poe_data[i + 1] = "On" if ips[i] else "Off"
     except Exception:
         pass
 
@@ -86,6 +87,7 @@ def get_switch_data():
 # ---------------- HTTP SERVER ----------------
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
+        # Serve JSON data of switch status
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
         self.send_header("Cache-Control", "no-cache")
