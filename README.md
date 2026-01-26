@@ -1,12 +1,11 @@
-# TP-Link Switch Status API
+<h1 align="center">TP-Link Switch Status API</h1>
 
-Simple Python HTTP API that exposes port and PoE status from TP-Link Easy Smart switches.
-Designed for monitoring dashboards such as [**gethomepage.dev**](https://github.com/gethomepage/homepage).
+<p align="center">
+Simple Python HTTP API that exposes port and PoE status from TP-Link Easy Smart switches.<br><br>
+Designed for monitoring dashboards such as <a href="https://github.com/gethomepage/homepage" target="_blank"><b>gethomepage.dev</b></a>.<br><br>
+<img width="2243" height="476" alt="image" src="https://github.com/user-attachments/assets/4c39d915-a9c5-4c76-9e9e-a2cf774eb848" />
+</p>
 
-<img width="2267" height="1043" alt="image" src="https://github.com/user-attachments/assets/20b2576e-f9c1-4955-a734-14bea8b33d09" />
-
-
----
 
 ## Features
 
@@ -14,8 +13,6 @@ Designed for monitoring dashboards such as [**gethomepage.dev**](https://github.
 - PoE state per port
 - Total ports / active ports count
 - Simple JSON output
-
----
 
 ## Requirements
 
