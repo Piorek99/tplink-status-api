@@ -3,7 +3,8 @@
 <p align="center">
 Simple Python HTTP API that exposes port and PoE status from TP-Link Easy Smart switches.<br><br>
 Designed for monitoring dashboards such as <a href="https://github.com/gethomepage/homepage" target="_blank"><b>gethomepage.dev</b></a>.<br><br>
-<img width="2243" height="476" alt="image" src="https://github.com/user-attachments/assets/4c39d915-a9c5-4c76-9e9e-a2cf774eb848" />
+<img width="2255" height="1046" alt="image" src="https://github.com/user-attachments/assets/db1383fc-c837-4418-858b-5f5f01fda266" />
+
 </p>
 
 
@@ -74,6 +75,8 @@ Example response from my switch:
 ```
 ## Gethomepage usage:
 Because of gethomepage widgets' limitation to 4 boxes, I had to use 2 widgets to display all ports in my SG108PE:
+<img width="1916" height="151" alt="image" src="https://github.com/user-attachments/assets/54206229-461e-4507-a58a-3295db5da751" />
+
 
 ```services.yaml```
 ```yaml
