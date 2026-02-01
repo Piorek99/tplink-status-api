@@ -178,8 +178,6 @@ Add to your `services.yaml`:
           format: text
 ```
 
-See `services.yaml` for more configuration examples.
-
 ## How It Works
 
 1. **Auto-detection**: The script automatically detects:
